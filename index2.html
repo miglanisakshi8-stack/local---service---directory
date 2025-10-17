@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>सर्विस प्रोवाइडर डायरेक्टरी | संपर्क करें</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header Styling */
+        h1 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 5px;
+            font-size: 32px;
+        }
+
+        p.subtitle {
+            text-align: center;
+            color: #6c757d;
+            margin-bottom: 30px;
+            font-size: 18px;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 15px;
+        }
+        
+        /* Service Category Filter */
+        .category-filter {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .category-filter button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            background-color: #e9ecef;
+            color: #495057;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .category-filter button.active,
+        .category-filter button:hover {
+            background-color: #28a745;
+            color: white;
+        }
+
+        /* Provider Card List */
+        .provider-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .provider-card {
+            background: #ffffff;
+            border: 1px solid #ced4da;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+        
+        .provider-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .provider-card h3 {
+            color: #007bff;
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-size: 20px;
+        }
+
+        .rating {
+            color: #ffc107; /* Star color */
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .contact-info p {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            margin-top: 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .contact-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🔍 लोकल कारीगर डायरेक्टरी</h1>
+        <p class="subtitle">अपनी ज़रूरत के हिसाब से प्लम्बर, इलेक्ट्रीशियन चुनें और सीधे संपर्क करें।</p>
+        
+        <div class="category-filter">
+            <button class="active" data-category="all">सभी सेवाएँ</button>
+            <button data-category="plumber">💧 प्लम्बर</button>
+            <button data-category="electrician">⚡ इलेक्ट्रीशियन</button>
+            <button data-category="carpenter">🔨 कारपेंटर</button>
+        </div>
+
+        <div class="provider-list">
+
+            <div class="provider-card" data-category="plumber">
+                <h3>रमेश प्लम्बर सेवा 💧</h3>
+                <div class="rating">⭐⭐⭐⭐⭐ (4.9)</div>
+                <div class="contact-info">
+                    <p><strong>इलाका:</strong> लाजपत नगर, दिल्ली</p>
+                    <p><strong>विशेषता:</strong> गीज़र और बाथरूम फिटिंग</p>
+                    <p><strong>पता:</strong> दुकान नं. 15, मुख्य बाज़ार</p>
+                </div>
+                <a href="tel:+919876543210" class="contact-btn">📞 अभी कॉल करें</a>
+            </div>
+
+            <div class="provider-card" data-category="electrician">
+                <h3>सुरेश इलेक्ट्रीशियन ⚡</h3>
+                <div class="rating">⭐⭐⭐⭐ (4.4)</div>
+                <div class="contact-info">
+                    <p><strong>इलाका:</strong> सेक्टर 18, नोएडा</p>
+                    <p><strong>विशेषता:</strong> वायरिंग और AC रिपेयर</p>
+                    <p><strong>पता:</strong> प्लॉट नं. 201, सर्विस रोड</p>
+                </div>
+                <a href="tel:+919988776655" class="contact-btn">📞 अभी कॉल करें</a>
+            </div>
+
+            <div class="provider-card" data-category="carpenter">
+                <h3>अजय फर्नीचर वर्क 🔨</h3>
+                <div class="rating">⭐⭐⭐⭐⭐ (4.8)</div>
+                <div class="contact-info">
+                    <p><strong>इलाका:</strong> साकेत, नई दिल्ली</p>
+                    <p><strong>विशेषता:</strong> मॉडुलर किचन और अलमारी</p>
+                    <p><strong>पता:</strong> गली नं. 7, नज़दीक मेट्रो स्टेशन</p>
+                </div>
+                <a href="tel:+919234567890" class="contact-btn">📞 अभी कॉल करें</a>
+            </div>
+            
+            </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.category-filter button');
+            const providerCards = document.querySelectorAll('.provider-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const category = this.getAttribute('data-category');
+                    
+                    // 1. Active button state
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // 2. Filter logic
+                    providerCards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+                        
+                        if (category === 'all' || category === cardCategory) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
